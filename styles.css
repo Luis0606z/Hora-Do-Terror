@@ -1,0 +1,154 @@
+body {
+    color: white;
+    background: black;
+    margin: 0;
+    font-family: "Chakra Petch", sans-serif;
+    margin-bottom: 100px;
+}
+
+header {
+    border-bottom: solid 2px #ff0000;
+    padding: 20px;
+    font-size: 32px;
+    color: #ff0000;
+    text-align: center;
+    text-transform: uppercase;
+    animation: headerGlow 2s infinite alternate;
+}
+
+@keyframes headerGlow {
+    from {
+        text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+    }
+    to {
+        text-shadow: 0 0 20px #ff0000, 0 0 30px #ff3333;
+    }
+}
+
+.chamada {
+    background: #222;
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: background 0.5s;
+}
+
+.chamada:hover {
+    background: #333;
+}
+
+.chamada-texto {
+    margin-right: 5%;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 48px;
+    color: #ff0000;
+    margin-bottom: 10px;
+    animation: textPulse 2s infinite alternate;
+}
+
+@keyframes textPulse {
+    from {
+        text-shadow: 0 0 5px #ff0000, 0 0 10px #ff3333;
+    }
+    to {
+        text-shadow: 0 0 15px #ff3333, 0 0 25px #ff6666;
+    }
+}
+
+p {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.categoria {
+    padding: 20px;
+    margin-top: 50px;
+    background: #111;
+    border-top: solid 2px #ff0000;
+}
+
+.categoria h2 {
+    color: #ff0000;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    animation: headerGlow 2s infinite alternate;
+}
+
+.categoria-videos {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px;
+    scroll-behavior: smooth;
+}
+
+.categoria-videos::-webkit-scrollbar {
+    height: 8px;
+}
+
+.categoria-videos::-webkit-scrollbar-thumb {
+    background-color: #ff0000;
+    border-radius: 4px;
+}
+
+.categoria-videos img {
+    opacity: 0.6;
+    height: 200px;
+    border-radius: 8px;
+    transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+}
+
+.categoria-videos img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff0000;
+}
+
+.categoria-videos a {
+    position: relative;
+}
+
+.categoria-videos a::after {
+    content: "▶";
+    position: absolute;
+    color: #ff0000;
+    font-size: 48px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.categoria-videos a:hover::after {
+    opacity: 0.8;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+    background-color: #222;
+    border-top: solid 2px #ff0000;
+    font-size: 16px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #ff0000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
